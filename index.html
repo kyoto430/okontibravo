@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="keywords">
+  <meta name="description" content="content">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+  <script src="./assets/js/index.js" defer></script>
+  <script src="./assets/js/swiper-bundle.min.js" defer></script>
+  <script src="./assets/js/slider.js" defer></script>
+  <title>ОконтиБраво</title>
+</head>
+
+<body>
+  <header class="header container-xl">
+    <div class="header__container container">
+      <a class="header__logo" href="#"><span>Logo title</span></a>
+      <nav class="header__nav">
+        <ul class="header__menu list-reset">
+          <li class="menu__item">
+            <a class="menu__link link" href="#">Menu__item-1</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#">Menu__item-2</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#">Menu__item-3</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#p">Menu__item-4</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#">Menu__item-5</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="overlay"></div>
+      <div class="menu__burger">
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <main class="main container">
+    <h1>MAIN CONTENT</h1>
+    <!-- POPUP TEST-->
+    <a class="popup-link" href="#popup-test">TEST POPUP</a>
+    <!-- SLIDER -->
+    <div class="custom__slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="custom__slider-img" src="#" alt="slider img">
+          <div class="custom__slider-wrapper">
+            <div class="custom__wrapper-title">
+              <p class="custom__silider-title">TITLE</p>
+              <p class="custom__silder-subtitle">SUBTITLE</p>
+            </div>
+            <div class="custom__slider-text">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aperiam, delectus explicabo non
+                soluta qui nihil accusamus esse sint ipsum ipsa recusandae hic voluptates rem, est, cumque magni
+                laudantium pariatur.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img class="custom__slider-img" src="#" alt="slider img">
+          <div class="custom__slider-wrapper">
+            <div class="custom__wrapper-title">
+              <p class="custom__silider-title">TITLE</p>
+              <p class="custom__silder-subtitle">SUBTITLE</p>
+            </div>
+            <div class="custom__slider-text">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aperiam, delectus explicabo non
+                soluta qui nihil accusamus esse sint ipsum ipsa recusandae hic voluptates rem, est, cumque magni
+                laudantium pariatur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom__slider-nav">
+        <div class="slider__btn-prev"></div>
+        <div class="slider__btn-next"></div>
+      </div>
+    </div>
+    <!-- SLIDER END -->
+    <!-- ACCORDEON -->
+    <div class="accordeon">
+      <div class="accordeon__li">
+        <input id="accordeon-item-1" type="checkbox" name="accordeon">
+        <label class="accordeon__btn" for="accordeon-item-1">
+          ACCORDEON TITLE 1
+        </label>
+        <div class="accordeon__toggle">
+          <div class="accordeon__toggle-inner">
+            <!-- content -->
+            <div class="accordeon-2">
+              <div class="accordeon-2__li">
+                <input id="accordeon-item-2-1" type="checkbox" name="accordeon">
+                <label class="accordeon-2__btn" for="accordeon-item-2-1">
+                  ACCORDEON INNER TITLE 1
+                </label>
+                <div class="accordeon-2__toggle">
+                  <div class="accordeon-2__toggle-inner">
+                    <!-- content -->
+                    <ul class="accordeon__list">
+                      <li><a href="#">ACCORDEON INNER TEXT 1</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordeon__li">
+        <input id="accordeon-item-2" type="checkbox" name="accordeon">
+        <label class="accordeon__btn" for="accordeon-item-2">
+          ACCORDEON TITLE 2
+        </label>
+        <div class="accordeon__toggle">
+          <div class="accordeon__toggle-inner">
+            <!-- content -->
+            <p>ACCORDEON TEXT</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ACCORDEON END -->
+  </main>
+  <footer class="footer container-xl">
+    <div class="footer__container container">
+      <p>FOOTER CONTENT</p>
+    </div>
+  </footer>
+  <!-- POPUPS -->
+  <div id="popup-test" class="popup">
+    <div class="popup__body">
+      <div class="popup__content">
+        <a href="#" class="popup__close close-popup"></a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus neque autem, doloremque qui recusandae
+          nam dolor quasi est quam non eos veniam odit nihil aut atque quia. Assumenda, voluptate nemo!</p>
+      </div>
+    </div>
+  </div>
+  <!-- POPUPS END-->
+</body>
+
+</html>

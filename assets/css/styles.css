@@ -10,6 +10,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 html {
@@ -24,7 +25,6 @@ body.lock,
 
 body {
   color: #2a2a2a;
-  font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -76,6 +76,20 @@ img {
 .container-xl {
   max-width: 1280px;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    margin: 0 40px;
+  }
+}
+
+@media (max-width: 325px) {
+  .container {
+    max-width: 100%;
+    margin: 0 10px;
+  }
 }
 
 /* -------- END -------- */
@@ -377,7 +391,12 @@ img {
 
 .header__background {
   position: absolute;
+  height: 100%;
   z-index: -1;
+}
+
+.header__background img {
+  height: 100%;
 }
 
 .header__nav {
@@ -444,6 +463,10 @@ img {
   color: #ffffff;
 }
 
+.header__title span {
+  font-style: italic;
+}
+
 .header__subtitle {
   font-style: normal;
   font-weight: 400;
@@ -454,6 +477,7 @@ img {
 
 .header__subtitle span {
   font-style: italic;
+  font-weight: 600;
 }
 
 .header__menu {
@@ -474,7 +498,7 @@ img {
 
 .menu__link {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 18px;
   line-height: 27px;
   color: #ffffff;
@@ -607,6 +631,32 @@ img {
     line-height: 30px;
     color: #000548;
   }
+
+  .header__inner {
+    margin-top: 68px;
+  }
+
+  .header__title {
+    font-size: 93px;
+    line-height: 109px;
+  }
+}
+
+@media (max-width: 675px) {
+  .header__inner {
+    gap: 12px;
+    margin-top: 60px;
+  }
+
+  .header__title {
+    font-size: 41px;
+    line-height: 48px;
+  }
+
+  .header__subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 @media (max-width: 564px) {
@@ -631,20 +681,282 @@ img {
   }
 }
 
+@media (max-width: 375px) {
+  .header {
+    height: 475px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-mobile__container {
+    padding: 16px 10px;
+  }
+
+  .header-mobile__nav {
+    margin: 10px;
+  }
+
+  .header-mobile__container .header__nav-top {
+    margin: 10px;
+  }
+}
+
 /* -------- END -------- */
 
 /* FOOTER */
 
-.footer {
+.footer__top {
+  display: flex;
+  gap: 75px;
+  padding: 40px 0px;
+  border-top: 1px solid rgba(65, 65, 65, 0.1);
+  border-bottom: 1px solid rgba(65, 65, 65, 0.1);
+}
+
+.footer__top-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  max-width: 245px;
+  width: 100%;
+  height: 57px;
+}
+
+.footer__logo img {
+  height: 100%;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 115px;
+}
+
+.footer__nav-inner {
+  display: flex;
+  column-gap: 62px;
+}
+
+.footer__nav-inner .footer__nav-list {
+  gap: 24px;
+}
+
+.footer__nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer__nav-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__list-link {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.products-link li:nth-child(1) .footer__list-link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #85ccef;
+}
+
+.products-link li:nth-child(2) .footer__list-link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4273d9;
+}
+
+.footer__nav-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.footer__contacts-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer__contacts-position {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__phones {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer__address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer__mail {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #4273d9;
+}
+
+.footer__mail img {
+  width: 28px;
+  height: 28px;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__socials-link {
+  display: flex;
+}
+
+.footer__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.footer__copy {
+  font-weight: 600;
+}
+
+.footer__policy,
+.footer__policy-mob {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration-line: underline;
+  color: #2a2a2a;
+  opacity: 0.3;
+}
+
+.footer__policy-mob {
+  display: none;
+}
+
+.footer__company a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__company img {
+  width: 28px;
+  height: 27px;
 }
 
 @media (max-width: 1024px) {
+  .footer__top {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0px;
+  }
+
+  .footer__top-inner {
+    flex-direction: row;
+    align-items: flex-end;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 675px) {
+  .footer__nav {
+    gap: 50px;
+  }
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media (max-width: 579px) {
+  .footer__top {
+    gap: 40px;
+  }
+
+  .footer__logo {
+    align-self: center;
+  }
+
+  .footer__nav {
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+
+  .footer__nav-inner .footer__nav-list {
+    gap: 16px;
+  }
+
+  .footer__nav .footer__nav-col:nth-child(1) {
+    gap: 24px;
+  }
+
+  .footer__nav .footer__nav-col:nth-child(2) {
+    gap: 32px;
+  }
+
+  .footer__nav-list {
+    gap: 16px;
+  }
+
+  .footer__list-link {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .footer__nav-col {
+    gap: 20px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 20px 0px 16px 0px;
+  }
+
+  .footer__policy {
+    display: none;
+  }
+
+  .footer__policy-mob {
+    display: flex;
+  }
 }
 
 /* -------- END -------- */

@@ -8,6 +8,7 @@
   <meta name="keywords" content="keywords">
   <meta name="description" content="content">
   <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/fonts/lato.css">
   <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
   <script src="./assets/js/index.js" defer></script>
   <script src="./assets/js/swiper-bundle.min.js" defer></script>
@@ -17,9 +18,11 @@
 
 <body>
   <header class="header container-xl">
-    <div class="header__background">
-      <img src="./assets/images/backgrounds/bg_main.jpg" alt="background">
-    </div>
+    <picture class="header__background">
+      <source media="(max-width: 375px)" srcset="./assets/images/backgrounds/bg_main-mobile.jpg">
+      <source media="(max-width: 744px)" srcset="./assets/images/backgrounds/bg_main-tablet.jpg">
+      <img src="./assets/images/backgrounds/bg_main.jpg" loading="lazy" alt="lorem">
+    </picture>
     <div class="header__container container">
       <nav class="header__nav">
         <ul class="header__menu list-reset">
@@ -97,11 +100,10 @@
     </div>
   </header>
   <main class="main">
-    <h1>MAIN CONTENT</h1>
     <!-- POPUP TEST-->
-    <a class="popup-link" href="#popup-test">TEST POPUP</a>
+    <!-- <a class="popup-link" href="#popup-test">TEST POPUP</a> -->
     <!-- SLIDER -->
-    <div class="custom__slider swiper">
+    <!-- <div class="custom__slider swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img class="custom__slider-img" src="#" alt="slider img">
@@ -136,55 +138,78 @@
         <div class="slider__btn-prev"></div>
         <div class="slider__btn-next"></div>
       </div>
-    </div>
+    </div> -->
     <!-- SLIDER END -->
-    <!-- ACCORDEON -->
-    <div class="accordeon">
-      <div class="accordeon__li">
-        <input id="accordeon-item-1" type="checkbox" name="accordeon">
-        <label class="accordeon__btn" for="accordeon-item-1">
-          ACCORDEON TITLE 1
-        </label>
-        <div class="accordeon__toggle">
-          <div class="accordeon__toggle-inner">
-            <!-- content -->
-            <div class="accordeon-2">
-              <div class="accordeon-2__li">
-                <input id="accordeon-item-2-1" type="checkbox" name="accordeon">
-                <label class="accordeon-2__btn" for="accordeon-item-2-1">
-                  ACCORDEON INNER TITLE 1
-                </label>
-                <div class="accordeon-2__toggle">
-                  <div class="accordeon-2__toggle-inner">
-                    <!-- content -->
-                    <ul class="accordeon__list">
-                      <li><a href="#">ACCORDEON INNER TEXT 1</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordeon__li">
-        <input id="accordeon-item-2" type="checkbox" name="accordeon">
-        <label class="accordeon__btn" for="accordeon-item-2">
-          ACCORDEON TITLE 2
-        </label>
-        <div class="accordeon__toggle">
-          <div class="accordeon__toggle-inner">
-            <!-- content -->
-            <p>ACCORDEON TEXT</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ACCORDEON END -->
   </main>
   <footer class="footer container-xl">
     <div class="footer__container container">
-      <p>FOOTER CONTENT</p>
+      <div class="footer__top">
+        <div class="footer__top-inner">
+          <a class="footer__logo" href="./index.html">
+            <img src="./assets/images/logo/img_logo_dark.svg" alt="logo">
+          </a>
+          <a class="footer__policy" href="#">Политика конфиденциальности</a>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__nav-col">
+            <p class="footer__nav-title">Навигация</p>
+            <div class="footer__nav-inner">
+              <ul class="footer__nav-list">
+                <li><a class="footer__list-link" href="#">Стоимость</a></li>
+                <li><a class="footer__list-link" href="#">О компании</a></li>
+              </ul>
+              <ul class="footer__nav-list">
+                <li><a class="footer__list-link" href="#">Вопросы</a></li>
+                <li><a class="footer__list-link" href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <ul class="footer__nav-list products-link">
+              <li><a class="footer__list-link" href="#">Продукция VEKA</a></li>
+              <li><a class="footer__list-link" href="#">Продукция REHAU</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <p class="footer__nav-title">Контакты</p>
+            <div class="footer__contacts-inner">
+              <div class="footer__nav-contacts">
+                <address class="footer__address footer__contacts-position">
+                  <img src="./assets/images/icons/icon_location.svg" alt="icon_location">
+                  <a href="#">7067 Al-Olaya Riyadh, 12244</a>
+                </address>
+                <div class="footer__phones footer__contacts-position">
+                  <img src="./assets/images/icons/icon_phone.svg" alt="icon_phone">
+                  <a href="tel:+7(499)1300134">+7 (499) 130-01-34</a>
+                </div>
+                <div class="footer__mail footer__contacts-position">
+                  <img src="./assets/images/icons/icon_mal.svg" alt="icon_mail">
+                  <a href="mailto:okonti.bravo@mail.ru">okonti.bravo@mail.ru</a>
+                </div>
+              </div>
+              <div class="footer__socials">
+                <a class="footer__socials-link" href="#">
+                  <img src="./assets/images/icons/icon_youtube.svg" alt="icon_youtube">
+                </a>
+                <a class="footer__socials-link" href="#">
+                  <img src="./assets/images/icons/icon_telegram.svg" alt="icon_telegram">
+                </a>
+                <a class="footer__socials-link" href="#">
+                  <img src="./assets/images/icons/icon_ya.svg" alt="icon_dzen">
+                </a>
+              </div>
+            </div>
+          </div>
+          <a class="footer__policy-mob" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2024</p>
+        <div class="footer__company">
+          <a href="https://web-ra.ru/" target="_blank">
+            <span>Разработано в Web-ra.com</span>
+            <img src="./assets/images/icons/icon_webra.svg" alt="Логотип Webra">
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
   <!-- POPUPS -->

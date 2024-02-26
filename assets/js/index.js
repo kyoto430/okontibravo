@@ -3,7 +3,7 @@ console.log('kyoto430 template js running...');
 // Меню бургер
 function burger() {
   const burgerBtn = document.querySelector('.menu__burger');
-  const menu = document.querySelector('.header__nav');
+  const menu = document.querySelector('.header-adaptive__menu');
   const menuLinks = document.querySelectorAll('.menu__link');
   const overlay = document.querySelector('.overlay');
 

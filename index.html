@@ -102,44 +102,231 @@
   <main class="main">
     <!-- POPUP TEST-->
     <!-- <a class="popup-link" href="#popup-test">TEST POPUP</a> -->
-    <!-- SLIDER -->
-    <!-- <div class="custom__slider swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img class="custom__slider-img" src="#" alt="slider img">
-          <div class="custom__slider-wrapper">
-            <div class="custom__wrapper-title">
-              <p class="custom__silider-title">TITLE</p>
-              <p class="custom__silder-subtitle">SUBTITLE</p>
+    <section class="company container-xl">
+      <picture class="company__background">
+        <source media="(max-width: 375px)" srcset="./assets/images/backgrounds/img_bg_parthners-mobile.jpg">
+        <source media="(max-width: 744px)" srcset="./assets/images/backgrounds/img_bg_parthners-tablet.jpg">
+        <img src="./assets/images/backgrounds/img_bg_parthners.jpg" loading="lazy" alt="lorem">
+      </picture>
+      <div class="container">
+        <div class="company__wrapper">
+          <h2 class="title">Мы сотрудничаем с</h2>
+          <ul class="company__list">
+            <li class="company__list-item">
+              <img src="./assets/images/company/company_01.png" alt="company 1">
+            </li>
+            <li class="company__list-item">
+              <img src="./assets/images/company/company_02.png" alt="company 2">
+            </li>
+            <li class="company__list-item">
+              <img src="./assets/images/company/company_02.png" alt="company 2">
+            </li>
+            <li class="company__list-item">
+              <img src="./assets/images/company/company_03.png" alt="company 3">
+            </li>
+            <li class="company__list-item">
+              <img src="./assets/images/company/company_01.png" alt="company 1">
+            </li>
+            <li class="company__list-item">
+              <img src="./assets/images/company/company_02.png" alt="company 2">
+            </li>
+            <li class="company__list-item">
+              <img src="./assets/images/company/company_02.png" alt="company 2">
+            </li>
+            <li class="company__list-item">
+              <img src="./assets/images/company/company_03.png" alt="company 3">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="preview">
+      <div class="slider__wrapper container">
+        <!-- SLIDER -->
+        <div class="preview__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="preview__slide">
+                <picture class="preview__img">
+                  <!-- <source media="(max-width: 425px)" srcset="./assets/images/mobile/slider/img_main.jpg">
+                  <source media="(max-width: 768px)" srcset="./assets/images/tablet/slider/img_main.jpg"> -->
+                  <img src="./assets/images/slider/img_prev.jpg" loading="lazy" alt="lorem">
+                </picture>
+                <div class="preview__inner" style="display: none;">
+                  <p class="preview__title">Название компании или объекта</p>
+                  <p class="preview__subtitle">Что было установлено (установка пластиковых окон компании VEKO категории
+                    С1</p>
+                  <p class="preview__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
             </div>
-            <div class="custom__slider-text">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aperiam, delectus explicabo non
-                soluta qui nihil accusamus esse sint ipsum ipsa recusandae hic voluptates rem, est, cumque magni
-                laudantium pariatur.</p>
+            <div class="swiper-slide">
+              <div class="preview__slide">
+                <picture class="preview__img">
+                  <!-- <source media="(max-width: 425px)" srcset="./assets/images/mobile/slider/img_main.jpg">
+                  <source media="(max-width: 768px)" srcset="./assets/images/tablet/slider/img_main.jpg"> -->
+                  <img src="./assets/images/slider/img_current.jpg" loading="lazy" alt="lorem">
+                </picture>
+                <div class="preview__inner">
+                  <p class="preview__title">Название компании или объекта</p>
+                  <p class="preview__subtitle">Что было установлено (установка пластиковых окон компании VEKO категории
+                    С1</p>
+                  <p class="preview__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="preview__slide">
+                <picture class="preview__img">
+                  <!-- <source media="(max-width: 425px)" srcset="./assets/images/mobile/slider/img_main.jpg">
+                  <source media="(max-width: 768px)" srcset="./assets/images/tablet/slider/img_main.jpg"> -->
+                  <img src="./assets/images/slider/img_next.jpg" loading="lazy" alt="lorem">
+                </picture>
+                <div class="preview__inner" style="display: none;">
+                  <p class="preview__title">Название компании или объекта</p>
+                  <p class="preview__subtitle">Что было установлено (установка пластиковых окон компании VEKO категории
+                    С1</p>
+                  <p class="preview__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="preview__slide">
+                <picture class="preview__img">
+                  <!-- <source media="(max-width: 425px)" srcset="./assets/images/mobile/slider/img_main.jpg">
+                  <source media="(max-width: 768px)" srcset="./assets/images/tablet/slider/img_main.jpg"> -->
+                  <img src="./assets/images/slider/img_current.jpg" loading="lazy" alt="lorem">
+                </picture>
+                <div class="preview__inner">
+                  <p class="preview__title">Название компании или объекта</p>
+                  <p class="preview__subtitle">Что было установлено (установка пластиковых окон компании VEKO категории
+                    С1</p>
+                  <p class="preview__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <img class="custom__slider-img" src="#" alt="slider img">
-          <div class="custom__slider-wrapper">
-            <div class="custom__wrapper-title">
-              <p class="custom__silider-title">TITLE</p>
-              <p class="custom__silder-subtitle">SUBTITLE</p>
+        <div class="preview__slider-nav">
+          <div class="swiper-button-prev preview-slider__btn-prev"></div>
+          <div class="swiper-pagination preview-slider__pagination"></div>
+          <div class="swiper-button-next preview-slider__btn-next"></div>
+        </div>
+        <!-- SLIDER END -->
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <div class="contacts__wrapper">
+          <h2 class="title">Наши <span>контакты</span></h2>
+          <div class="contacts__inner">
+            <div class="contacts__inner-wrapper">
+              <div class="contacts__adress">
+                <address class="footer__address footer__contacts-position">
+                  <img src="./assets/images/icons/icon_location.svg" alt="icon_location">
+                  <a href="#">7067 Al-Olaya Riyadh, 12244</a>
+                </address>
+                <div class="footer__phones footer__contacts-position">
+                  <img src="./assets/images/icons/icon_phone.svg" alt="icon_phone">
+                  <a href="tel:+7(499)1300134">+7 (499) 130-01-34</a>
+                </div>
+                <div class="footer__mail footer__contacts-position">
+                  <img src="./assets/images/icons/icon_mal.svg" alt="icon_mail">
+                  <a href="mailto:okonti.bravo@mail.ru">okonti.bravo@mail.ru</a>
+                </div>
+                <div class="contacts__socials">
+                  <a class="footer__socials-link" href="#">
+                    <img src="./assets/images/icons/icon_youtube.svg" alt="icon_youtube">
+                  </a>
+                  <a class="footer__socials-link" href="#">
+                    <img src="./assets/images/icons/icon_telegram.svg" alt="icon_telegram">
+                  </a>
+                  <a class="footer__socials-link" href="#">
+                    <img src="./assets/images/icons/icon_ya.svg" alt="icon_dzen">
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="custom__slider-text">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aperiam, delectus explicabo non
-                soluta qui nihil accusamus esse sint ipsum ipsa recusandae hic voluptates rem, est, cumque magni
-                laudantium pariatur.</p>
-            </div>
+            <div class="contacts__map"></div>
           </div>
         </div>
       </div>
-      <div class="custom__slider-nav">
-        <div class="slider__btn-prev"></div>
-        <div class="slider__btn-next"></div>
+    </section>
+    <section class="seo">
+      <div class="container">
+        <div class="seo__wrapper">
+          <p class="seo__title">Блок с <span>Сео</span>-текстом</p>
+          <div class="seo__text-wrapper">
+            <p class="seo__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. <a class="seo__link" href="#">Гиперссылка</a> dolor sit amet, consectetur
+              adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="seo__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit.
+            </p>
+          </div>
+          <div class="seo__text-hidden" style="position: absolute; transform: scale(0);">
+            <div class="seo__inner">
+              <h2 class="seo__title-2">Блок заголовок h2</h2>
+              <div class="seo__text-wrapper">
+                <p class="seo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
+                  amet,
+                  consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                  dolor
+                  sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. </p>
+                <p class="seo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
+                  amet,
+                  consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                  dolor
+                  sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. </p>
+              </div>
+            </div>
+            <div class="seo__inner">
+              <h3 class="seo__title-3">Блок заголовок h3</h3>
+              <div class="seo__text-wrapper">
+                <ol class="seo__list seo__text">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                </ol>
+                <ul class="seo__list seo__text">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="btn-show">Раскрыть текст</div>
+        </div>
       </div>
-    </div> -->
-    <!-- SLIDER END -->
+    </section>
   </main>
   <footer class="footer container-xl">
     <div class="footer__container container">

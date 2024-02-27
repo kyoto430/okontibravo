@@ -134,3 +134,30 @@ function popups() {
 }
 
 popups();
+
+function showMoreText() {
+  document.addEventListener('DOMContentLoaded', function () {
+    const showMoreButtons = document.querySelectorAll('.btn-show');
+    const hiddenText = document.querySelectorAll('.seo__text-hidden');
+
+    showMoreButtons.forEach(function (showMoreButton) {
+      showMoreButton.addEventListener('click', function () {
+        hiddenText.forEach(function (text) {
+          if (text.style.transform !== 'scale(1)') {
+            text.style.position = 'initial';
+            text.style.transform = 'scale(1)';
+            showMoreButton.innerText = 'Скрыть';
+            showMoreButton.classList.add('arrow-up');
+          } else {
+            text.style.position = 'absolute';
+            text.style.transform = 'scale(0)';
+            showMoreButton.innerText = 'Раскрыть текст';
+            showMoreButton.classList.remove('arrow-up');
+          }
+        });
+      });
+    });
+  });
+}
+
+showMoreText();

@@ -161,3 +161,49 @@ function showMoreText() {
 }
 
 showMoreText();
+
+function hideBlocks() {
+  const programmCards = document.querySelectorAll('.programm__sublist');
+  programmCards.forEach(function (programmCard) {
+    programmCard.classList.add('programm-hidden');
+  });
+}
+
+hideBlocks();
+
+function showMoreProgramm() {
+  document.addEventListener('DOMContentLoaded', function () {
+    const showMoreButtons = document.querySelectorAll('.btn-show__programm');
+    const hideEmptyProgramm = document.querySelectorAll('.programm__list-item');
+
+    hideEmptyProgramm.forEach(function (emptyProgramm) {
+      const programmDayContent =
+        emptyProgramm.querySelector('.programm__sublist');
+      if (programmDayContent.offsetHeight <= 0) {
+        emptyProgramm.classList.add('visually-hidden');
+      }
+    });
+    showMoreButtons.forEach(function (showMoreButton) {
+      let menu = showMoreButton.previousElementSibling;
+      let title = showMoreButton.previousElementSibling.previousElementSibling;
+      console.log('title', title);
+      showMoreButton.addEventListener('click', function () {
+        if (menu.style.transform !== 'scale(1)') {
+          menu.style.position = 'initial';
+          menu.style.transform = 'scale(1)';
+          if (window.innerWidth >= 425) {
+          }
+          title.classList.add('active-title');
+          showMoreButton.classList.add('up');
+        } else {
+          menu.style.position = 'absolute';
+          menu.style.transform = 'scale(0)';
+          title.classList.remove('active-title');
+          showMoreButton.classList.remove('up');
+        }
+      });
+    });
+  });
+}
+
+showMoreProgramm();

@@ -186,7 +186,6 @@ function showMoreProgramm() {
     showMoreButtons.forEach(function (showMoreButton) {
       let menu = showMoreButton.previousElementSibling;
       let title = showMoreButton.previousElementSibling.previousElementSibling;
-      console.log('title', title);
       showMoreButton.addEventListener('click', function () {
         if (menu.style.transform !== 'scale(1)') {
           menu.style.position = 'initial';
@@ -207,3 +206,17 @@ function showMoreProgramm() {
 }
 
 showMoreProgramm();
+
+const profilsList = document.querySelectorAll('.profils__list-item');
+
+profilsList.forEach((profilItem) => {
+  profilItem.addEventListener('click', () => {
+    let profilSublist = profilItem.querySelector('.profils__sublist-inner');
+    let profilImg = profilItem.querySelector('.profils__img');
+    let profilInner = profilItem.querySelector('.profils__list-inner');
+    profilItem.classList.toggle('max-width');
+    profilSublist.classList.toggle('sublist-show');
+    profilImg.classList.toggle('img-show');
+    profilInner.classList.toggle('border');
+  });
+});

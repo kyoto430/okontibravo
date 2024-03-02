@@ -1,0 +1,490 @@
+@font-face {
+  font-family: 'CeraVEKA Bold';
+  src: url(../fonts/CeraVEKA-Bold.woff2);
+}
+
+@font-face {
+  font-family: 'CeraVEKA Light';
+  src: url(../fonts/CeraVEKA-Light.woff2);
+}
+
+@font-face {
+  font-family: 'CeraVEKA Regular';
+  src: url(../fonts/CeraVEKA-Regular.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  font-family: 'CeraVEKA Regular';
+  border: 1px solid rgb(228, 228, 228);
+  padding: 20px;
+  margin: 100px 0px 20px 0px;
+}
+
+#window-1-small-icon path,
+#window-2-small-icon path,
+#window-3-small-icon path,
+#window-4-small-icon path,
+#window-5-small-icon path,
+#window-6-small-icon path {
+  fill: #0069b4;
+}
+
+.calculator-header {
+  display: flex;
+  padding: 24px;
+  position: relative;
+  gap: 10px;
+}
+
+.copy,
+.basket {
+  position: absolute;
+  cursor: pointer;
+}
+
+.copy {
+  right: 40px;
+}
+
+.basket {
+  right: 0;
+  display: none;
+}
+
+.copy span,
+.basket span {
+  position: relative;
+}
+
+.copy span::after {
+  content: url(../images/calc/copy.svg);
+  position: absolute;
+  right: 24px;
+  top: 10px;
+}
+
+.basket span::after {
+  content: url(../images/calc/basket.svg);
+  position: absolute;
+  right: 24px;
+  top: 10px;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px;
+  font-size: 12px;
+  position: absolute;
+  z-index: 1;
+  margin-left: -66px;
+  margin-top: 40px;
+}
+
+.display-toggle {
+  display: none !important;
+}
+
+.display-flex-toggle {
+  display: flex !important;
+}
+
+.closed-items {
+  display: none;
+  align-items: center;
+  gap: 15px;
+}
+
+.closed-items span {
+  font-size: 14px;
+  color: rgb(11, 23, 66);
+  padding: 6px 12px;
+  background-color: rgb(243, 245, 249);
+  cursor: pointer;
+}
+
+.copy span:hover .tooltiptext,
+.basket span:hover .tooltiptext {
+  visibility: visible;
+}
+
+.open-close {
+  max-width: 48px;
+  max-height: 48px;
+  min-width: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(234, 235, 238);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.open-close::after {
+  content: url(../images/calc/arrow.svg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+}
+
+.open-close.opened::after {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.calculator-header-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calculator-header-title h3 span,
+.calculator-header-title h3 p {
+  font-size: 18px;
+  color: black;
+}
+
+.calculator-header-title span {
+  font-size: 14px;
+  color: rgb(135, 142, 167);
+}
+
+.calculator-content {
+  display: flex;
+  gap: 38px;
+}
+
+.calculator-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/calc/background.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 50%;
+  height: 100%;
+  padding: 0px 20px 20px 0px;
+  position: relative;
+}
+
+.calculator-left span {
+  position: absolute;
+  font-size: 12px;
+  white-space: nowrap;
+  color: rgb(132, 133, 138);
+}
+
+.right-size {
+  right: -10px;
+  transform: rotate(-90deg);
+}
+
+.bottom-size {
+  bottom: 10px;
+}
+
+.calculator-left img {
+  width: 100%;
+  height: auto;
+}
+
+.calculator-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 50%;
+}
+
+.calculator-right-item {
+  background-color: rgb(243, 245, 249);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calculator-right-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.calculator-right-item-content span {
+  color: rgb(197, 199, 205);
+  cursor: pointer;
+}
+
+.active-window {
+  background-color: #0069b4;
+  color: white !important;
+}
+
+.search-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px;
+  background-color: white;
+  border: 1px solid rgb(197, 199, 205);
+  position: relative;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.color-div input {
+  position: absolute;
+  left: 50px;
+}
+
+.color-div::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgb(121, 121, 121);
+}
+
+.color-div-colors::after {
+  content: url(../images/calc/color.svg);
+  border: none;
+}
+
+.search-select input {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  user-select: none;
+  background: transparent;
+  width: 80%;
+  color: rgb(132, 133, 138);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.search-select::before {
+  content: url(../images/calc/arrow.svg);
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 9999;
+  pointer-events: none;
+  height: 18px;
+}
+
+.search-select .options {
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  overflow: hidden;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  visibility: hidden;
+  background-color: white;
+}
+
+.search-select .options .option:hover {
+  background-color: rgb(243, 245, 249);
+}
+
+.search-select .options .option:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.search-select .options .option {
+  padding: 8px;
+  color: black;
+}
+
+.search-select.opened .options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.search-select input::placeholder {
+  color: rgb(132, 133, 138);
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.window-params,
+.params-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.window-params {
+  gap: 16px;
+}
+
+.window-params-item,
+.window-params-item-two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.window-params-item input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  outline-color: #5bc5f2;
+}
+
+.params-input {
+  width: 50%;
+}
+
+.params-input span,
+.params-input label {
+  font-size: 14px;
+  font-family: 'CeraVEKA Bold';
+}
+
+.params-input span {
+  margin-bottom: 10px;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-checkbox label {
+  background-color: transparent;
+  border: 1px solid rgb(132, 133, 138);
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.custom-checkbox label:after {
+  border: 1px solid rgb(0, 105, 180);
+  border-top: none;
+  border-right: none;
+  content: '';
+  height: 3px;
+  left: 2px;
+  opacity: 0;
+  position: absolute;
+  top: 3px;
+  transform: rotate(-45deg);
+  width: 10px;
+}
+
+.custom-checkbox input[type='checkbox'] {
+  visibility: hidden;
+}
+
+.custom-checkbox input[type='checkbox']:checked + label:after {
+  opacity: 1;
+}
+
+.custom-checkbox input[type='checkbox']:checked ~ label {
+  border: 1px solid rgb(0, 105, 180);
+}
+
+.checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.window-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.window-option {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.window-2-option,
+.window-3-option,
+.window-4-option,
+.window-5-option,
+.window-6-option {
+  display: none;
+}
+
+.checkboxes-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: calc(33.333% - 25px);
+  min-width: 135px;
+}
+
+.checkboxes-item span {
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+@media (max-width: 1200px) {
+  .calculator-content {
+    flex-direction: column;
+  }
+
+  .calculator-right {
+    width: 100%;
+  }
+
+  .calculator-left {
+    max-width: 348px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculator-left {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .copy {
+    left: 80px;
+    top: 76px;
+  }
+}

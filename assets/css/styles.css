@@ -137,22 +137,73 @@ input[type='email'] {
   line-height: 24px;
   text-transform: uppercase;
   color: #2a2a2a;
+  opacity: 0.8;
   background: #fff url('../images/icons/icon_arrow-gray.svg') no-repeat 18px
     center;
   background-position: right;
+  background-origin: content-box;
   cursor: pointer;
 }
 
-input[type='email']::placeholder {
+.input__popup {
+  display: flex;
+  padding: 16px 24px;
+  align-items: center;
+  border: none;
+  border: 1px solid rgba(65, 65, 65, 0.1);
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #2a2a2a;
+  cursor: pointer;
+}
+
+.textarea__popup {
+  display: flex;
+  padding: 16px 24px;
+  align-items: center;
+  border: none;
+  border: 1px solid rgba(65, 65, 65, 0.1);
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #2a2a2a;
+  cursor: pointer;
+  resize: none;
+}
+
+input[type='email']::placeholder,
+.input__popup::placeholder,
+.textarea__popup::placeholder {
   color: #2a2a2a;
   opacity: 0.2;
 }
 
-input[type='email']:focus {
+.input__popup:focus,
+.textarea__popup:focus {
+  outline: none;
+}
+
+input[type='email']:focus,
+.input__city:focus {
   outline: none;
   background: #fff url('../images/icons/icon_arrow-black.svg') no-repeat 18px
     center;
   background-position: right;
+  background-origin: content-box;
+}
+
+.input__city {
+  background: #fff url('../images/icons/icon_arrow-gray.svg') no-repeat 18px
+    center;
+  background-position: right;
+  background-origin: content-box;
 }
 
 /* -------- END -------- */
@@ -160,7 +211,7 @@ input[type='email']:focus {
 /* BASIC */
 
 .title {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 44px;
@@ -233,25 +284,52 @@ input[type='email']:focus {
 
 .swiper-wrapper {
   align-items: center;
+  gap: 30px;
 }
 
 .swiper-slide {
-  width: 220px !important;
+  width: 250px !important;
   height: 284px !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
 }
 
 .swiper-slide-active {
-  width: 460px !important; /* Увеличение активного слайда */
+  width: 460px !important;
   height: 358px !important;
-  z-index: 1; /* Поместить активный слайд поверх других */
+}
+
+.swiper-slide-active .preview__inner {
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 10rem !important;
+  }
+
+  .swiper-wrapper {
+    gap: 40px;
+  }
+
+  .swiper-slide-active,
+  .swiper-slide-active .preview__img {
+    width: 460px !important;
+    height: 358px !important;
+  }
+}
+
+@media (max-width: 740px) {
+  .swiper-slide-active,
+  .swiper-slide-active .preview__img {
+    width: fit-content !important;
+  }
+
+  .swiper-slide {
+    width: fit-content !important;
+  }
+
+  .swiper-wrapper {
+    gap: 0px;
+  }
 }
 
 /* -------- END -------- */
@@ -488,7 +566,7 @@ input[type='email']:focus {
 }
 
 .popup__title {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
@@ -519,6 +597,7 @@ input[type='email']:focus {
 }
 
 .popup__form .feedback__container-checkbox {
+  max-width: 402px;
   margin-top: 16px;
 }
 
@@ -533,6 +612,41 @@ input[type='email']:focus {
   text-align: center;
 }
 
+.popup__form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#popup-calc .popup__content {
+  height: auto;
+  padding: 48px 15px;
+}
+
+#popup-calc .popup__wrapper {
+  max-width: 459px;
+  width: 100%;
+}
+
+#popup-calc .popup__wrapper-text {
+  align-items: flex-start;
+}
+
+#popup-calc .feedback__container-checkbox {
+  max-width: 100%;
+  margin-top: 20px;
+  align-items: center;
+}
+
+#popup-calc .feedback__container-checkbox a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#popup-calc .popup__button {
+  padding: 16px 50px;
+}
+
 @media (max-width: 540px) {
   .popup__content {
     max-width: 327px;
@@ -542,6 +656,10 @@ input[type='email']:focus {
 
   .popup__form {
     margin-top: 60px;
+  }
+
+  .popup__form .feedback__container-checkbox {
+    max-width: 273px;
   }
 
   .popup__title {
@@ -569,6 +687,24 @@ input[type='email']:focus {
   .popup__icon {
     width: 104px;
     margin-top: 40px;
+  }
+
+  .popup__form-inputs input {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  #popup-calc .popup__content {
+    max-width: 295px;
+    width: 100%;
+  }
+
+  #popup-calc .popup__form {
+    margin-top: 24px;
+  }
+
+  #popup-calc .popup__button {
+    margin-top: 24px;
   }
 }
 
@@ -1399,6 +1535,7 @@ input[type='email']:focus {
 }
 
 .preview-slider__btn-next {
+  position: relative;
   width: 18px !important;
   height: 18px !important;
   display: block;
@@ -1408,9 +1545,11 @@ input[type='email']:focus {
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
+  z-index: 11;
 }
 
 .preview-slider__btn-prev {
+  position: relative;
   width: 18px !important;
   height: 18px !important;
   display: block;
@@ -1421,11 +1560,11 @@ input[type='email']:focus {
   transform: rotate(180deg);
   border: none;
   cursor: pointer;
+  z-index: 11;
 }
 
 .preview__slider {
-  /* max-width: 460px;
-  height: 358px; */
+  margin-top: 40px;
 }
 
 .preview__slider-nav {
@@ -1444,18 +1583,17 @@ input[type='email']:focus {
 .preview__slide {
   height: 100%;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .preview__inner {
-  height: 100%;
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
   margin: 0px 34px 18px 28px;
+  transform: scale(0);
 }
 
 .preview__title {
@@ -1484,19 +1622,55 @@ input[type='email']:focus {
 }
 
 .preview__img {
-  position: absolute;
-  top: 0;
+  height: 100%;
   display: flex;
-  z-index: -1;
+}
+
+.preview__img img {
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 1024px) {
 }
 
 @media (max-width: 768px) {
+  .preview .title {
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
+  }
+
+  .preview .container {
+    margin: 0 auto;
+  }
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media (max-width: 740px) {
+  .preview .container {
+    margin: 0px 40px;
+  }
+
+  .preview__inner {
+    margin: 0px 11.5px 36px 11.5px;
+  }
+
+  .preview__text {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .preview__slider {
+    margin-top: 24px;
+  }
+
+  .preview .title {
+    max-width: 295px;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: left;
+  }
 }
 
 /* -------- END -------- */
@@ -1515,7 +1689,7 @@ input[type='email']:focus {
 }
 
 .company__wrapper .title {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 44px;
@@ -1609,7 +1783,7 @@ input[type='email']:focus {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -1662,7 +1836,7 @@ input[type='email']:focus {
 }
 
 .feedback__container-checkbox span {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -1902,7 +2076,7 @@ input[type='email']:focus {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  padding: 40px 0px;
+  padding: 40px 22.5px;
   background: #f5f5f5;
 }
 
@@ -1915,7 +2089,7 @@ input[type='email']:focus {
 
 .advantages__modal-title {
   max-width: 570px;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
@@ -1942,6 +2116,11 @@ input[type='email']:focus {
   line-height: 24px;
   text-align: center;
   color: #ffffff;
+  transition: all 0.3s ease-in;
+}
+
+.popup__button:hover {
+  background-color: #222a94;
 }
 
 .advantages__list {
@@ -2069,10 +2248,16 @@ input[type='email']:focus {
   gap: 40px;
 }
 
-.profils__list {
+/* .profils__list {
   display: flex;
   flex-direction: column;
   gap: 60px;
+} */
+
+.profils__list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .profils__list-desc {
@@ -2082,9 +2267,14 @@ input[type='email']:focus {
 }
 
 .profils__list-item {
-  width: 100%;
+  width: 300px;
   display: flex;
   justify-content: space-between;
+}
+
+.profils__list-item.max-width {
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 .profils__list-wrapper {
@@ -2123,12 +2313,21 @@ input[type='email']:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(65, 65, 65, 0.1);
+  padding: 20px 12px;
+  background: #f5f5f5 url(../images/icons/icon_arrow-blue.svg) no-repeat 18px
+    center;
+  background-position: right center;
+  cursor: pointer;
+  background-origin: content-box;
+}
+
+.profils__list-inner.border {
   background: #fff url(../images/icons/icon_arrow-blue.svg) no-repeat 18px
     center;
+  padding: 0px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(65, 65, 65, 0.1);
   background-position: right 8px;
-  cursor: pointer;
 }
 
 .profils__item-number {
@@ -2147,6 +2346,10 @@ input[type='email']:focus {
 }
 
 .profils__sublist-inner {
+  display: none;
+}
+
+.profils__sublist-inner.sublist-show {
   display: flex;
 }
 
@@ -2159,6 +2362,10 @@ input[type='email']:focus {
 }
 
 .profils__img {
+  display: none;
+}
+
+.profils__img.img-show {
   width: 336px;
   height: 309px;
   display: flex;
@@ -2196,10 +2403,6 @@ input[type='email']:focus {
 }
 
 @media (max-width: 768px) {
-  .profils__list {
-    gap: 40px;
-  }
-
   .profils__sublist {
     column-gap: 45px;
   }
@@ -2242,6 +2445,10 @@ input[type='email']:focus {
 }
 
 @media (max-width: 375px) {
+  .profils__list {
+    gap: 12px;
+  }
+
   .profils__gallery {
     position: relative;
     right: 40px;
@@ -2257,12 +2464,9 @@ input[type='email']:focus {
   margin-top: 100px;
 }
 
-.calc__wrapper {
-}
-
 .calc__title {
   margin-bottom: 40px;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 44px;
@@ -2310,6 +2514,48 @@ input[type='email']:focus {
   height: 141px;
 }
 
+.calc__popup-bg {
+  display: flex;
+  padding: 60px 0px 60px 0px;
+  background-color: #4273d9;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc__popup-inner {
+  max-width: 710px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.calc__popup-title {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 62px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.calc__popup-subtitle {
+  max-width: 660px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.calc__popup-bg .popup__button {
+  display: inline-block;
+  background-color: #fff;
+  color: #4273d9;
+}
+
 @media (max-width: 768px) {
   .calc__title {
     font-size: 36px;
@@ -2340,20 +2586,48 @@ input[type='email']:focus {
   .calc__gallery-img {
     height: auto !important;
   }
+
+  .calc__gallery-img img {
+    width: 100%;
+  }
+
+  .calc__popup-inner {
+    max-width: 536px;
+  }
 }
 
 @media (max-width: 564px) {
+  .calc__inner .container {
+    margin: 0 auto;
+  }
+
   .calc__gallery {
     display: none;
   }
 
   .calc__gallery-mob {
     display: flex;
+    justify-content: center;
   }
 
   .calc__title {
     max-width: 95%;
     font-size: 24px;
     line-height: 36px;
+  }
+
+  .calc__popup-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .calc__popup-subtitle {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .calc__popup-inner {
+    margin: 0px 40px;
+    gap: 24px;
   }
 }

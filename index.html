@@ -8,9 +8,11 @@
   <meta name="keywords" content="keywords">
   <meta name="description" content="content">
   <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/fonts/lato.css">
   <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
   <script src="./assets/js/index.js" defer></script>
+  <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/swiper-bundle.min.js" defer></script>
   <script src="./assets/js/slider.js" defer></script>
   <title>ОконтиБраво</title>
@@ -161,6 +163,484 @@
         </div>
       </div>
     </section>
+    <div class="calc__inner">
+      <div style="display: none;">
+        <svg id="window-1-icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="M18 13.5V46.5H42V13.5H18ZM40 44.5H20V15.5H40V44.5Z" fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg id="window-2-icon" width="60" height="60" viewBox="0 0 61 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+              d="M15.5996 13.5V46.5H45.5996V13.5H15.5996ZM17.5996 44.5V15.5H29.5996V44.5H17.5996ZM43.5996 44.5H31.5996V15.5H43.5996V44.5Z"
+              fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg id="window-3-icon" width="60" height="60" viewBox="0 0 61 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+              d="M53.7002 13.5V11.5H6.7002V48.5H53.7002V13.5ZM8.7002 46.5V13.5H21.7002V46.5H8.7002ZM23.7002 46.5V13.5H36.7002V46.5H23.7002ZM38.7002 46.5V13.5H51.6002V46.5H38.7002Z"
+              fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg id="window-4-icon" width="60" height="60" viewBox="0 0 61 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+              d="M11.7998 9V51H49.7998V9H11.7998ZM13.7998 49V23H23.7998V49H13.7998ZM25.7998 49V23H35.7998V49H25.7998ZM47.7998 49H37.7998V23H47.7998V49ZM47.7998 21H13.7998V11H47.7998V21Z"
+              fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg id="window-5-icon" width="60" height="60" viewBox="0 0 61 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+              d="M30.4004 10.5C22.1109 10.5 15.4004 17.2653 15.4004 25.6224V49.5H45.4004V25.6224C45.4004 17.2653 38.6899 10.5 30.4004 10.5ZM39.8741 16.0714L30.953 25.0653V12.1714C34.4267 12.251 37.5846 13.7633 39.8741 16.0714ZM29.3741 12.1714V25.0653L20.6899 16.3102C22.9004 14.002 25.9793 12.4102 29.3741 12.1714ZM19.6635 17.5837L27.6372 25.6224H16.9793C16.9793 22.598 18.0057 19.8122 19.6635 17.5837ZM16.9793 47.9082V27.2143H24.8741V47.9082H16.9793ZM26.453 47.9082V27.2143H34.3478V47.9082H26.453ZM43.8214 47.9082H35.9267V27.2143H43.8214V47.9082ZM32.6109 25.6224L40.9004 17.2653C42.7162 19.5735 43.8214 22.4388 43.8214 25.6224H32.6109Z"
+              fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg id="window-6-icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8 7.5H52V39.4H24V52.5H8V7.5ZM10 37.5V50.5H22V37.5H10ZM22 35.5H10V9.5H22V35.5ZM24 37.5H36V9.5H24V37.5ZM38 37.5H50V9.5H38V37.5Z"
+              fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg id="window-1-small-icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="M18 13.5V46.5H42V13.5H18ZM40 44.5H20V15.5H40V44.5Z" fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg id="window-2-small-icon" width="60" height="60" viewBox="0 0 61 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+              d="M15.5996 13.5V46.5H45.5996V13.5H15.5996ZM17.5996 44.5V15.5H29.5996V44.5H17.5996ZM43.5996 44.5H31.5996V15.5H43.5996V44.5Z"
+              fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg id="window-3-small-icon" width="60" height="60" viewBox="0 0 61 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+              d="M53.7002 13.5V11.5H6.7002V48.5H53.7002V13.5ZM8.7002 46.5V13.5H21.7002V46.5H8.7002ZM23.7002 46.5V13.5H36.7002V46.5H23.7002ZM38.7002 46.5V13.5H51.6002V46.5H38.7002Z"
+              fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg id="window-4-small-icon" width="60" height="60" viewBox="0 0 61 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+              d="M11.7998 9V51H49.7998V9H11.7998ZM13.7998 49V23H23.7998V49H13.7998ZM25.7998 49V23H35.7998V49H25.7998ZM47.7998 49H37.7998V23H47.7998V49ZM47.7998 21H13.7998V11H47.7998V21Z"
+              fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg id="window-5-small-icon" width="60" height="60" viewBox="0 0 61 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+              d="M30.4004 10.5C22.1109 10.5 15.4004 17.2653 15.4004 25.6224V49.5H45.4004V25.6224C45.4004 17.2653 38.6899 10.5 30.4004 10.5ZM39.8741 16.0714L30.953 25.0653V12.1714C34.4267 12.251 37.5846 13.7633 39.8741 16.0714ZM29.3741 12.1714V25.0653L20.6899 16.3102C22.9004 14.002 25.9793 12.4102 29.3741 12.1714ZM19.6635 17.5837L27.6372 25.6224H16.9793C16.9793 22.598 18.0057 19.8122 19.6635 17.5837ZM16.9793 47.9082V27.2143H24.8741V47.9082H16.9793ZM26.453 47.9082V27.2143H34.3478V47.9082H26.453ZM43.8214 47.9082H35.9267V27.2143H43.8214V47.9082ZM32.6109 25.6224L40.9004 17.2653C42.7162 19.5735 43.8214 22.4388 43.8214 25.6224H32.6109Z"
+              fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg id="window-6-small-icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8 7.5H52V39.4H24V52.5H8V7.5ZM10 37.5V50.5H22V37.5H10ZM22 35.5H10V9.5H22V35.5ZM24 37.5H36V9.5H24V37.5ZM38 37.5H50V9.5H38V37.5Z"
+              fill="currentColor"></path>
+          </g>
+        </svg>
+      </div>
+      <div class="container calculator-div">
+        <div class="calculator">
+          <div class="calculator-header">
+            <span class="open-close"></span>
+            <div class="window-header-icon">
+              <svg width="60" height="60">
+                <use class="window-header-svg" href="#window-1-small-icon" />
+              </svg>
+            </div>
+            <div class="calculator-header-title">
+              <h3>№<span class="window-number">1</span> <span class="window-text">Одностворчатое окно</span></h3>
+              <span><span id="width-size">1300</span> x <span id="height-size">1460</span> мм</span>
+            </div>
+            <div class="copy">
+              <span>
+                <p class="tooltiptext">Копировать</p>
+              </span>
+            </div>
+            <div class="basket">
+              <span>
+                <p class="tooltiptext">Удалить</p>
+              </span>
+            </div>
+          </div>
+          <div class="calculator-content">
+            <div class="calculator-left">
+              <span class="right-size">1 300 мм</span>
+              <span class="bottom-size">1 460 мм</span>
+              <img class="main-window" src="./assets/images/calc/window-1.png" alt="lorem">
+            </div>
+            <div class="calculator-right">
+              <div class="calculator-right-item">
+                <h3>Тип окна</h3>
+                <div class="calculator-right-item-content">
+                  <span class="window active-window" id="window-1">
+                    <svg width="60" height="60">
+                      <use href="#window-1-icon" />
+                    </svg>
+                  </span>
+
+                  <span class="window" id="window-2">
+                    <svg width="60" height="60">
+                      <use href="#window-2-icon" />
+                    </svg>
+                  </span>
+
+                  <span class="window" id="window-3">
+                    <svg width="60" height="60">
+                      <use href="#window-3-icon" />
+                    </svg>
+                  </span>
+                  <span class="window" id="window-4">
+                    <svg width="60" height="60">
+                      <use href="#window-4-icon" />
+                    </svg>
+                  </span>
+
+                  <span class="window" id="window-5">
+                    <svg width="60" height="60">
+                      <use href="#window-5-icon" />
+                    </svg>
+                  </span>
+
+                  <span class="window" id="window-6">
+                    <svg width="60" height="60">
+                      <use href="#window-6-icon" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="calculator-right-item">
+                <h3>Створки</h3>
+                <div class="window-options window-1-option">
+                  <div class="window-option">
+                    <span>1 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="window-options window-2-option">
+                  <div class="window-option">
+                    <span>1 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="window-option">
+                    <span>2 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="window-options window-3-option">
+                  <div class="window-option">
+                    <span>1 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="window-option">
+                    <span>2 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="window-option">
+                    <span>3 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="window-options window-4-option">
+                  <div class="window-option">
+                    <span>1 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="window-option">
+                    <span>2 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="window-option">
+                    <span>3 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="window-option">
+                    <span>4 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="window-options window-5-option">
+                  <div class="window-option">
+                    <span>1 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="window-option">
+                    <span>2 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="window-option">
+                    <span>3 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <ul class="options">
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                        <li class="option">Откидное</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="window-options window-6-option">
+                  <div class="window-option">
+                    <span>1 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Дверь" readonly="">
+                      <ul class="options">
+                        <li class="option">Дверь</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="window-option">
+                    <span>2 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Нет" readonly="">
+                      <ul class="options">
+                        <li class="option">Нет</li>
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="window-option">
+                    <span>3 створка</span>
+                    <div class="search-select">
+                      <input class="search-select-input" type="text" placeholder="Поворотно-откидное" readonly="">
+                      <input class="search-select-input" type="text" placeholder="Нет" readonly="">
+                      <ul class="options">
+                        <li class="option">Нет</li>
+                        <li class="option">Поворотно</li>
+                        <li class="option">Поворотно-откидное</li>
+                        <li class="option">Глухое</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator-right-item">
+                <h3>Параметры окна</h3>
+                <span>1 створка</span>
+                <div class="window-params">
+                  <div class="window-params-item">
+                    <div class="params-input">
+                      <label>Ширина, мм</label>
+                      <input type="text" id="width-input" name="" value="1300">
+                    </div>
+                    <div class="params-input">
+                      <label>Высота, мм</label>
+                      <input type="text" id="height-input" name="" value="1300">
+                    </div>
+                  </div>
+                  <div class="window-params-item-two">
+                    <div class="params-input">
+                      <span>Стеклопакет</span>
+                      <div class="search-select">
+                        <input class="search-select-input" type="text" placeholder="Однокамерный" readonly="">
+                        <ul class="options">
+                          <li class="option">Однокамерный</li>
+                          <li class="option">Двухкамерный</li>
+                          <li class="option">Шумозащитный</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="params-input">
+                      <span>Цвет</span>
+                      <div class="search-select color-div">
+                        <input class="search-select-input" type="text" placeholder="Белый" readonly="">
+                        <ul class="options">
+                          <li class="option white">Белый</li>
+                          <li class="option colors">Цветной</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator-right-item">
+                <h3>Дополнительные опции</h3>
+                <div class="params-input">
+                  <span>Цвет</span>
+                  <div class="search-select color-div">
+                    <input class="search-select-input" type="text" placeholder="Белый" readonly="">
+                    <ul class="options">
+                      <li class="option white">Белый</li>
+                      <li class="option colors">Цветной</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="checkboxes">
+                  <div class="checkboxes-item">
+                    <div class="custom-checkbox">
+                      <input type="checkbox" id="checkbox-1" />
+                      <label for="checkbox-1"></label>
+                    </div>
+                    <span>Подоконник</span>
+                  </div>
+                  <div class="checkboxes-item">
+                    <div class="custom-checkbox">
+                      <input type="checkbox" id="checkbox-2" />
+                      <label for="checkbox-2"></label>
+                    </div>
+                    <span>Отливы</span>
+                  </div>
+                  <div class="checkboxes-item">
+                    <div class="custom-checkbox">
+                      <input type="checkbox" id="checkbox-3" />
+                      <label for="checkbox-3"></label>
+                    </div>
+                    <span>Откосы</span>
+                  </div>
+                  <div class="checkboxes-item">
+                    <div class="custom-checkbox">
+                      <input type="checkbox" id="checkbox-4" />
+                      <label for="checkbox-4"></label>
+                    </div>
+                    <span>Москитная сетка</span>
+                  </div>
+                  <div class="checkboxes-item">
+                    <div class="custom-checkbox">
+                      <input type="checkbox" id="checkbox-5" />
+                      <label for="checkbox-5"></label>
+                    </div>
+                    <span>Монтаж</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="closed-items">
+            <span>Поворотное</span>
+            <span>Однокамерный</span>
+            <span>Белый</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calc__popup-bg">
+      <div class="calc__popup-inner">
+        <span class="calc__popup-title">Расчет выбранных позиций</span>
+        <p class="calc__popup-subtitle">Спасибо за уделенное время, мы позвоним вам и назовем цену вашего окна, как
+          только произведем все необходимые расчеты. Оставьте, пожалуйста, телефон и укажите дополнительные опции по
+          желанию.</p>
+        <a class="popup__button popup-link" href="#popup-calc">Получить расчет</a>
+      </div>
+    </div>
     <section class="profils">
       <div class="container">
         <div class="profils__wrapper">
@@ -506,15 +986,16 @@
     </section>
     <section class="preview">
       <div class="slider__wrapper container">
+        <h2 class="title">О нас словами <span>наших клиентов</span></h2>
         <!-- SLIDER -->
-        <!-- <div class="preview__slider swiper">
+        <div class="preview__slider swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="preview__slide">
                 <picture class="preview__img">
                   <img src="./assets/images/slider/img_prev.jpg" loading="lazy" alt="lorem">
                 </picture>
-                <div class="preview__inner" style="display: none;">
+                <div class="preview__inner">
                   <p class="preview__title">Название компании или объекта</p>
                   <p class="preview__subtitle">Что было установлено (установка пластиковых окон компании VEKO категории
                     С1</p>
@@ -544,7 +1025,22 @@
                 <picture class="preview__img">
                   <img src="./assets/images/slider/img_next.jpg" loading="lazy" alt="lorem">
                 </picture>
-                <div class="preview__inner" style="display: none;">
+                <div class="preview__inner">
+                  <p class="preview__title">Название компании или объекта</p>
+                  <p class="preview__subtitle">Что было установлено (установка пластиковых окон компании VEKO категории
+                    С1</p>
+                  <p class="preview__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="preview__slide">
+                <picture class="preview__img">
+                  <img src="./assets/images/slider/img_prev.jpg" loading="lazy" alt="lorem">
+                </picture>
+                <div class="preview__inner">
                   <p class="preview__title">Название компании или объекта</p>
                   <p class="preview__subtitle">Что было установлено (установка пластиковых окон компании VEKO категории
                     С1</p>
@@ -569,27 +1065,20 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div> -->
-        <div class="preview__slider swiper">
-          <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="./assets/images/slider/img_current.jpg" loading="lazy" alt="lorem">
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/slider/img_current.jpg" loading="lazy" alt="lorem">
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/slider/img_current.jpg" loading="lazy" alt="lorem">
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/slider/img_current.jpg" loading="lazy" alt="lorem">
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/slider/img_current.jpg" loading="lazy" alt="lorem">
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/slider/img_current.jpg" loading="lazy" alt="lorem">
+              <div class="preview__slide">
+                <picture class="preview__img">
+                  <img src="./assets/images/slider/img_next.jpg" loading="lazy" alt="lorem">
+                </picture>
+                <div class="preview__inner">
+                  <p class="preview__title">Название компании или объекта</p>
+                  <p class="preview__subtitle">Что было установлено (установка пластиковых окон компании VEKO категории
+                    С1</p>
+                  <p class="preview__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="preview__slider-nav">
@@ -796,6 +1285,33 @@
                 auctor. Nulla vitae dictum nisl. </span>
             </label>
             <a class="popup__button popup-link" href="#popup-correct">Записаться на замер</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup-calc" class="popup">
+    <div class="popup__body">
+      <div class="popup__content">
+        <a href="#" class="popup__close close-popup"></a>
+        <div class="popup__wrapper">
+          <div class="popup__wrapper-text">
+            <p class="popup__title">Заявка на расчет</p>
+          </div>
+          <form class="popup__form">
+            <div class="popup__form-inputs">
+              <div class="popup__form-inputs">
+                <input class="input__popup input__city" type="text" name="city" id="city" placeholder="ваш город">
+                <input class="input__popup" type="text" name="name" id="name" placeholder="ваше имя">
+                <input class="input__popup" type="tel" name="phone" id="phone" placeholder="телефон">
+                <textarea class="textarea__popup" name="comment" id="comment" placeholder="Ваш комментарий"></textarea>
+              </div>
+            </div>
+            <label class="feedback__container-checkbox">
+              <input type="checkbox" checked>
+              <span>Lorem ipsum dolor sit amet, <a href="#">политика конфиденциальности</a> pulvinar </span>
+            </label>
+            <a class="popup__button popup-link" href="#popup-correct">Получить расчет</a>
           </form>
         </div>
       </div>

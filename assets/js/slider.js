@@ -16,7 +16,6 @@ new Swiper('.preview__slider', {
     740: {
       loop: true,
       slidesPerView: 3,
-      watchSlidesVisibility: true,
       centeredSlides: true,
     },
   },

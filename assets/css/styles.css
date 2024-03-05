@@ -104,6 +104,7 @@ img {
 }
 
 .btn-show__programm {
+  display: block;
   border: none;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -122,7 +123,7 @@ img {
 
 /* INPUTS */
 
-input[type='email'] {
+.input__phone {
   width: 300px;
   height: 39px;
   display: flex;
@@ -178,7 +179,7 @@ input[type='email'] {
   resize: none;
 }
 
-input[type='email']::placeholder,
+.input__phone::placeholder,
 .input__popup::placeholder,
 .textarea__popup::placeholder {
   color: #2a2a2a;
@@ -190,7 +191,7 @@ input[type='email']::placeholder,
   outline: none;
 }
 
-input[type='email']:focus,
+.input__phone:focus,
 .input__city:focus {
   outline: none;
   background: #fff url('../images/icons/icon_arrow-black.svg') no-repeat 18px
@@ -531,17 +532,12 @@ input[type='email']:focus,
   align-items: center;
   max-width: 620px;
   width: 100%;
-  height: 580px;
   padding: 60px 37.5px 61px 36.5px;
   text-align: center;
   background-color: #fff;
   transition: all 0.8s ease 0s;
   opacity: 0;
   transform: translate(0px, -100%);
-}
-
-#popup-correct .popup__content {
-  height: 457px;
 }
 
 .popup__icon {
@@ -592,17 +588,27 @@ input[type='email']:focus,
   margin-top: 40px;
 }
 
-.popup__form input[type='email'] {
+.popup__form .input__phone {
   width: 100%;
 }
 
 .popup__form .feedback__container-checkbox {
-  max-width: 402px;
+  align-items: center;
   margin-top: 16px;
 }
 
 .popup__form .feedback__container-checkbox span {
   text-align: left;
+}
+
+#popup-question .feedback__container-checkbox a,
+.feedback__container-checkbox a {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: underline;
 }
 
 .popup__form .popup__button {
@@ -635,7 +641,7 @@ input[type='email']:focus,
 #popup-calc .feedback__container-checkbox {
   max-width: 100%;
   margin-top: 20px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #popup-calc .feedback__container-checkbox a {
@@ -650,16 +656,11 @@ input[type='email']:focus,
 @media (max-width: 540px) {
   .popup__content {
     max-width: 327px;
-    height: 587px;
     padding: 60px 16px 62px 16px;
   }
 
   .popup__form {
     margin-top: 60px;
-  }
-
-  .popup__form .feedback__container-checkbox {
-    max-width: 273px;
   }
 
   .popup__title {
@@ -1455,10 +1456,10 @@ input[type='email']:focus,
 }
 
 .contacts__map {
-  max-width: 944px;
+  /* max-width: 944px;
   width: 100%;
   height: 358px;
-  background-color: #d9d9d9;
+  background-color: #d9d9d9; */
 }
 
 @media (max-width: 768px) {
@@ -2043,6 +2044,20 @@ input[type='email']:focus,
     font-size: 36px;
     line-height: 54px;
   }
+  .programm__list-item .btn-show__programm {
+    width: 50px;
+  }
+
+  .programm__list-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 740px) {
+  .programm__wrapper .title {
+    font-size: 36px;
+    line-height: 54px;
+  }
 }
 
 @media (max-width: 564px) {
@@ -2135,7 +2150,6 @@ input[type='email']:focus,
 }
 
 .advantages__list-item:nth-child(2) {
-  max-width: 291px;
 }
 
 .advantages__list-number {
@@ -2270,6 +2284,26 @@ input[type='email']:focus,
   width: 300px;
   display: flex;
   justify-content: space-between;
+}
+
+.profils__list-item:nth-child(1) {
+  order: 1;
+}
+
+.profils__list-item:nth-child(2) {
+  order: 3;
+}
+
+.profils__list-item:nth-child(3) {
+  order: 5;
+}
+
+.profils__list-item:nth-child(4) {
+  order: 2;
+}
+
+.profils__list-item:nth-child(5) {
+  order: 4;
 }
 
 .profils__list-item.max-width {
@@ -2629,5 +2663,27 @@ input[type='email']:focus,
   .calc__popup-inner {
     margin: 0px 40px;
     gap: 24px;
+  }
+}
+
+@media (max-width: 425px) {
+  .calc .container {
+    margin: auto;
+  }
+
+  .calc__title {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  .calc__gallery-mob img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .calc__title {
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }
